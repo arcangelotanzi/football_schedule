@@ -2,7 +2,14 @@
   <div>{{currentMatch.homeTeam.name}} ({{currentMatch.scoreHomeTeam}} - {{currentMatch.scoreAwayTeam}}) {{currentMatch.awayTeam.name}} </div>
 </div>-->
 
-
+<form>
+  <input class="form-control" #myTitle type="text" placeholder="Enter a title">
+</form>
+<button (click)="getPartiteGiornata(myTitle.value)">SEARCH</button>
 <div *ngIf="giornantaCorrente!=undefined">
-  <div *ngFor="let g of giornantaCorrente.myMatches"> {{g.homeTeam.name}} ({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}}) {{g.awayTeam.name}} </div>
+
+  <div *ngFor="let g of giornantaCorrente.myMatches">
+    <div> {{g.homeTeam.name}} ({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}}) {{g.awayTeam.name}}</div>
+
+  </div>
 </div>

@@ -32,22 +32,22 @@ export class Match {
   currentMatch: number;
 
   static fromJson(json: any): Match {
-    let m: Match = new Match();
-    let teamTmp = new Team();
-    let teamHome = new Team();
+    const currentMatch: Match = new Match();
+    // let teamTmp = new Team();
+    // let teamHome = new Team();
 
-    m.id = json.id;
-    m.stage = json.stage;
-    m.matchDay = json.matchday;
-    m.homeTeam = json.homeTeam;
-    m.awayTeam = json.awayTeam;
-    m.scoreHomeTeam = json.score['fullTime']['homeTeam'];
-    m.scoreAwayTeam = json.score['fullTime']['awayTeam'];
-    m.homePartial = json.score['halfTime']['homeTeam'];
-    m.awayPartial = json.score['halfTime']['awayTeam'];
-    m.currentMatch = json.season['currentMatchday'];
+    currentMatch.id = json.id;
+    currentMatch.stage = json.stage;
+    currentMatch.matchDay = json.matchday;
+    currentMatch.homeTeam = json.homeTeam;
+    currentMatch.awayTeam = json.awayTeam;
+    currentMatch.scoreHomeTeam = json.score.fullTime.homeTeam; // ['fullTime']['homeTeam'];
+    currentMatch.scoreAwayTeam = json.score.fullTime.awayTeam; // ['fullTime']['awayTeam'];
+    currentMatch.homePartial = json.score.halfTime.homeTeam; // ['halfTime']['homeTeam'];
+    currentMatch.awayPartial = json.score.halfTime.awayTeam; // ['halfTime']['awayTeam'];
+    currentMatch.currentMatch = json.season.currentMatchday; // ['currentMatchday'];
 
-    return m;
+    return currentMatch;
 
   }
 

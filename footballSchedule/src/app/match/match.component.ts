@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MatchService } from '../services/match.service';
 import { Match } from '../models/match';
 import { Giornata } from '../models/giornata';
@@ -13,6 +13,7 @@ export class MatchComponent implements OnInit {
   apiKey = '3f7baae8e7e04a779af756d912da901a';
   currentMatch: Match;
   giornantaCorrente: Giornata;
+  @Input() numeroGiornata;
 
   constructor(private matchService: MatchService) {
     console.log("ciao");
@@ -23,22 +24,17 @@ export class MatchComponent implements OnInit {
         console.log(this.currentMatch);
       });*/
 
-    /*this.matchService.getPartiteDellaGiornata(1).pipe()
-      .subscribe(p => {
-        //this.x = p;
-        this.giornantaCorrente = p;
-        console.log("component: ", this.giornantaCorrente);
-      });*/
+      //this.getPartiteGiornata(this.numeroGiornata);
 
-    this.matchService.getPartiteDellaGiornata(1).pipe()
-      .subscribe(p => {
-        //this.x = p;
-        this.giornantaCorrente = p;
-        console.log("component: ", this.giornantaCorrente);
-      });
   }
 
   ngOnInit() {
   }
 
+  getPartiteGiornata(numeroGiornata){
+    this.matchService.getPartiteDellaGiornata(numeroGiornata).pipe()
+      .subscribe(result => {
+        this.giornantaCorrente = result;
+      });
+  }
 }
