@@ -1,4 +1,4 @@
-//import { Team } from './team';
+import { Team } from './team';
 //import { navigationCancelingError } from '@angular/router/src/shared';
 
 
@@ -21,27 +21,32 @@ export class Match {
   minute: string;
   attendance: number;
   venue: string;
-  matchday: number;
+  matchDay: number;
   stage: string;
-  homeTeam: any;
-  awayTeam: any;
-  scorehome: string;
-  scoreaway: string;
-  homepartial: string;
-  awaypartial: string;
+  homeTeam: Team;
+  awayTeam: Team;
+  scoreHomeTeam: string;
+  scoreAwayTeam: string;
+  homePartial: string;
+  awayPartial: string;
   currentMatch: number;
 
   static fromJson(json: any): Match {
     let m: Match = new Match();
+    let teamTmp = new Team();
+    let teamHome = new Team();
 
-    m.id = json.match.id;
+    m.id = json.id;
     m.stage = json.stage;
-    m.matchday = json.match.matchday;
-    m.homeTeam = json.match.homeTeam;
-    m.awayTeam = json.match.awayTeam;
+    m.matchDay = json.matchday;
+    m.homeTeam = json.homeTeam;
+    m.awayTeam = json.awayTeam;
+    m.scoreHomeTeam = json.score['fullTime']['homeTeam'];
+    m.scoreAwayTeam = json.score['fullTime']['awayTeam'];
+    m.homePartial = json.score['halfTime']['homeTeam'];
+    m.awayPartial = json.score['halfTime']['awayTeam'];
+    m.currentMatch = json.season['currentMatchday'];
 
-
-    //console.log(json['matches']);
     return m;
 
   }

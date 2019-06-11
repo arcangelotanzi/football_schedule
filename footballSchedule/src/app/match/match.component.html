@@ -1,3 +1,8 @@
-<div *ngIf="currentMatch!=undefined">
-  <div>{{currentMatch.homeTeam.name}} - {{currentMatch.awayTeam.name}} </div>
+<!--<div *ngIf="currentMatch!=undefined">
+  <div>{{currentMatch.homeTeam.name}} ({{currentMatch.scoreHomeTeam}} - {{currentMatch.scoreAwayTeam}}) {{currentMatch.awayTeam.name}} </div>
+</div>-->
+
+
+<div *ngIf="giornantaCorrente!=undefined">
+  <div *ngFor="let g of giornantaCorrente.myMatches"> {{g.homeTeam.name}} ({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}}) {{g.awayTeam.name}} </div>
 </div>
