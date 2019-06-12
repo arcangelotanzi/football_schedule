@@ -1,15 +1,17 @@
 <!--<div *ngIf="currentMatch!=undefined">
   <div>{{currentMatch.homeTeam.name}} ({{currentMatch.scoreHomeTeam}} - {{currentMatch.scoreAwayTeam}}) {{currentMatch.awayTeam.name}} </div>
 </div>-->
-
+<div class="bodyComplete">
 <form>
   <input class="form-control" #myTitle type="text" placeholder="Enter a title">
 </form>
-<button (click)="getPartiteGiornata(myTitle.value)">SEARCH</button>
+<br>
+<button id="ricerca"type="button" class="btn btn-primary" (click)="getPartiteGiornata(myTitle.value)">SEARCH</button>
 <div *ngIf="giornantaCorrente!=undefined">
-
+<table class="table">
   <div *ngFor="let g of giornantaCorrente.myMatches">
-    <div> {{g.homeTeam.name}} ({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}}) {{g.awayTeam.name}}</div>
-
+    <div > {{g.homeTeam.name}} ({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}}) {{g.awayTeam.name}}</div>
   </div>
+</table>
+</div>
 </div>
