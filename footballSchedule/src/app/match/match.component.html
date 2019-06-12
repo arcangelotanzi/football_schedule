@@ -6,7 +6,7 @@
     <input class="form-control" #numeroGiornata type="text" placeholder="Inserisci il numero della giornata">
   </form>
   <br>
-  <button type="button" class="btn btn-primary" (click)="getPartiteGiornata(numeroGiornata.value)">Ricerca</button>
+  <button type="number" class="btn btn-primary" (click)="getPartiteGiornata(numeroGiornata.value)">Ricerca</button>
   <div *ngIf="giornantaCorrente!=undefined">
     <br>
     <table class="table">
