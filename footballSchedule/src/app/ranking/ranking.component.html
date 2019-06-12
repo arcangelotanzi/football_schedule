@@ -1,3 +1,5 @@
-<p>
-  ranking works!
-</p>
+<div *ngIf="ranking!=undefined">
+  <p *ngFor="let rankingSerieA of ranking.rankingObject">
+    {{rankingSerieA.team.name}}
+  </p>
+</div>

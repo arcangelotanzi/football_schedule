@@ -38,4 +38,16 @@ export class Team {
     return team;
   }
 
+  setId(id){
+    this.id=id;
+  }
+
+  setCrestUrl(crestUrl){
+    this.crestUrl= crestUrl;
+  }
+
+  setName(name){
+    this.name=name;
+  }
+
 }
