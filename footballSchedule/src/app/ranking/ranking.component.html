@@ -1,5 +1,5 @@
 <div *ngIf="ranking!=undefined">
-  <p *ngFor="let rankingSerieA of ranking.rankingObject">
-    {{rankingSerieA.team.name}}
+  <p *ngFor="let posizione of ranking.rankingObject">
+    {{posizione.team.name}} - {{posizione.points}} - {{posizione.won}}
   </p>
 </div>

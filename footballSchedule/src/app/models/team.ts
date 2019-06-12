@@ -12,7 +12,6 @@ export class Team {
   public founded: number;
   public clubColors: string;
   public venue: string;
-  public squadPlayer: Player[] = [];
   public crestUrl: string;
 
   static fromJson(json: any): Team {
@@ -31,23 +30,6 @@ export class Team {
     team.venue = json.venue;
     team.crestUrl = json.crestUrl;
 
-    for (let item of json.squad) {
-      team.squadPlayer.push(Player.fromJson(item));
-    }
-
     return team;
   }
-
-  setId(id){
-    this.id=id;
-  }
-
-  setCrestUrl(crestUrl){
-    this.crestUrl= crestUrl;
-  }
-
-  setName(name){
-    this.name=name;
-  }
-
 }
