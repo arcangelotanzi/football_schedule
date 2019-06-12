@@ -12,19 +12,19 @@
     <table class="table">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">Giornata</th>
+          <th scope="col">Giornata {{numeroGiornata.value}} </th>
           <th scope="col" align="center">Risultato</th>
         </tr>
       </thead>
 
-    
+
         <tbody *ngFor="let g of giornantaCorrente.myMatches">
           <tr>
             <td>{{g.homeTeam.name}} - {{g.awayTeam.name}} </td>
             <td align="center">({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}})</td>
           </tr>
         </tbody>
-      
+
     </table>
   </div>
 </div>

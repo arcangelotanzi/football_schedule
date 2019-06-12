@@ -1,22 +1,5 @@
 import { Player } from './player';
 
-enum TeamStruct {
-  id = 'id',
-  name = 'name',
-  shortName = 'shortName',
-  tla = 'tla',
-  address = 'address',
-  website = 'website',
-  phone = 'phone',
-  email = 'email',
-  founded = 'founded',
-  clubColors = 'clubColors',
-  venue = 'venue',
-  squadPlayer = 'squad',
-  crestUrl = 'crestUrl'
-
-}
-
 export class Team {
   public id: number;
   public name: string;
@@ -33,22 +16,22 @@ export class Team {
   public crestUrl: string;
 
   static fromJson(json: any): Team {
-    let team: Team = new Team();
+    const team: Team = new Team();
 
-    team.id = json[TeamStruct.id];
-    team.name = json[TeamStruct.name];
-    team.shortName = json[TeamStruct.shortName];
-    team.tla = json[TeamStruct.tla];
-    team.address = json[TeamStruct.address];
-    team.website = json[TeamStruct.website];
-    team.phone = json[TeamStruct.phone];
-    team.email = json[TeamStruct.email];
-    team.founded = json[TeamStruct.founded];
-    team.clubColors = json[TeamStruct.clubColors];
-    team.venue = json[TeamStruct.venue];
-    team.crestUrl = json[TeamStruct.crestUrl]
+    team.id = json.id;
+    team.name = json.name;
+    team.shortName = json.shortName;
+    team.tla = json.tla;
+    team.address = json.address;
+    team.website = json.website;
+    team.phone = json.phone;
+    team.email = json.email;
+    team.founded = json.founded;
+    team.clubColors = json.clubColors;
+    team.venue = json.venue;
+    team.crestUrl = json.crestUrl;
 
-    for (let item of json['squad']) {
+    for (let item of json.squad) {
       team.squadPlayer.push(Player.fromJson(item));
     }
 
