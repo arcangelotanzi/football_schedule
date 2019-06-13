@@ -19,3 +19,8 @@
 
   .table:nth-child(even) {background: rgb(241, 240, 240)}
   
+  .borderexample {
+    border-style:solid;
+    border-color:#287EC7;
+    border:3px; border-style:solid; border-color:rgb(255, 255, 255); padding: 1em;
+   }
