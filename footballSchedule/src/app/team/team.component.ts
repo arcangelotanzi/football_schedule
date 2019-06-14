@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 import { TeamService } from '../services/team.service';
 import { Team } from '../models/team';
 
@@ -9,24 +9,24 @@ import { Team } from '../models/team';
 })
 export class TeamComponent implements OnInit {
 
-  teamList: Team [] = [];
+  @Input() idTeam: number;
+  currentTeam: Team;
+  changeLog:any[]=[];
 
-  constructor(private teamService: TeamService) {
-    this.getRanking();
+  constructor(private teamService: TeamService) { }
+
+  ngOnInit() { }
+
+  ngOnChanges(changes: SimpleChanges) {
+    console.log(this.idTeam);
+    this.getTeamDetails(this.idTeam);
   }
 
-  ngOnInit() {
-  }
-
-  getRanking(){
-    this.teamService.getTeamList().pipe()
+  getTeamDetails(idTeam) {
+    this.teamService.getTeamDetails(idTeam).pipe()
       .subscribe(result => {
-        console.log("xx", result);
-        for (let item of result.teams) {
-          this.teamList.push(Team.fromJson(item));
-        }
-      });
-
+        this.currentTeam = Team.fromJson(result);
+      }
+      );
   }
-
 }

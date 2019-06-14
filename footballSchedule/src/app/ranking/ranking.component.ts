@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { RankingService } from '../services/ranking.service';
 import { Ranking } from '../models/ranking';
+import { TeamService } from '../services/team.service';
 
 @Component({
   selector: 'app-ranking',
@@ -13,9 +14,9 @@ export class RankingComponent implements OnInit {
 
   ranking: Ranking;
 
-  constructor(private rankingService: RankingService) {
-    console.log("ciao");
+  @Output() clickedTeam = new EventEmitter();
 
+  constructor(private rankingService: RankingService) {
     this.getRanking();
   }
 
@@ -27,6 +28,10 @@ export class RankingComponent implements OnInit {
       .subscribe(result => {
         this.ranking = result;
       });
+  }
+
+  onClick(team) {
+    this.clickedTeam.emit(team);
   }
 
 }

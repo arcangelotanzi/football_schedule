@@ -13,6 +13,7 @@ export class Team {
   public clubColors: string;
   public venue: string;
   public crestUrl: string;
+  public squad: Player[] = [];
 
   static fromJson(json: any): Team {
     const team: Team = new Team();
@@ -29,6 +30,10 @@ export class Team {
     team.clubColors = json.clubColors;
     team.venue = json.venue;
     team.crestUrl = json.crestUrl;
+
+    if (json.squad !== undefined) {
+      team.squad = json.squad;
+    }
 
     return team;
   }

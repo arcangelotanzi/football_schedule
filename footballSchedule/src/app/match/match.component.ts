@@ -17,14 +17,6 @@ export class MatchComponent implements OnInit {
 
   constructor(private matchService: MatchService) {
     console.log("ciao");
-    /*this.matchService.getMatchInfo(2).pipe()
-      .subscribe(p => {
-        //this.x = p;
-        this.currentMatch = p;
-        console.log(this.currentMatch);
-      });*/
-
-      //this.getPartiteGiornata(this.numeroGiornata);
 
   }
 
