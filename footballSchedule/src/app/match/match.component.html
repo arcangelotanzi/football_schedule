@@ -7,30 +7,37 @@
   <br>
   <br>
   <br>
-  <br>
- <br>
+ 
  <div class="prova">
   <div class="container">
-    <div class="row">
-        <div class="col3">
-            <h5>Giornata &nbsp;&nbsp;&nbsp;</h5>
+      <form>  
+          <div class="container">
+            <input  placeholder="Search..."  min="1" max="38"  type="number" #numeroGiornata  placeholder="Numero giornata" />
+            <div class="search">
+
+            </div><br><br><br><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <button   type="button"  class="btn btn-primary" (click)="getPartiteGiornata(numeroGiornata.value) " >Ricerca</button>
           </div>
+        </form>
+        
+
+    <div class="row">
+        
       <div class="col2">
           
-  <form>  
-    <input style="width: 60%;float:left; background-color:transparent "min="1" max="38" class="form-control" type="number" #numeroGiornata  placeholder="numero">
-  </form>
-  <button type="number" style="float:right;"class="btn btn-primary" (click)="getPartiteGiornata(numeroGiornata.value)" >Ricerca</button>
+  
+
 </div>
 </div>
 <div class="col2">
 </div>
 </div>
 </div>
-  <div *ngIf="giornantaCorrente!=undefined">
-    <br>
+  <div *ngIf="giornantaCorrente!=undefined" >
+    <br><br><br><br>
     <table class="table">
-      <thead class="thead-dark">
+      <thead class="thead-dark" >
         <tr>
           <th scope="col">Giornata {{numeroGiornata.value}} </th>
           <th scope="col" align="center">Risultato</th>
@@ -38,10 +45,10 @@
       </thead>
 
 
-        <tbody *ngFor="let g of giornantaCorrente.myMatches">
+        <tbody *ngFor="let g of giornantaCorrente.myMatches ;">
           <tr>
-            <td>{{g.homeTeam.name}} - {{g.awayTeam.name}} </td>
-            <td align="center">({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}})</td>
+            <td>  {{g.homeTeam.name}} - {{g.awayTeam.name}} </td>
+            <td align="center"> ({{g.scoreHomeTeam}} - {{g.scoreAwayTeam}})</td>
           </tr>
         </tbody>
 
