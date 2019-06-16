@@ -1,0 +1,32 @@
+div {
+    margin-top:22%;
+}
+
+.table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 15px 15px 15px 15px;
+    
+
+  }
+
+  
+ .dark{
+    background: rgba(0, 0, 0, 0.829);
+    color:white;
+  }
+  .dark1{
+    background: rgba(0, 0, 0, 0.521);
+    color:white;
+  }
+  .dark2{
+    background: rgba(0, 0, 0, 0.411);
+    color:white;
+  }
+  .dark3{
+    background: rgba(0, 0, 0, 0.342);
+    color:white;
+  }
+  .table:nth-child(odd) {background: rgba(241, 240, 240, 0.63)}
+  

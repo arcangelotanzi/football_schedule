@@ -1,8 +1,53 @@
+
+
 <div *ngIf="currentTeam!= undefined">
-  <p> <img src={{currentTeam.crestUrl}} alt="Smiley face" height="42" width="42"> </p>
-  <p> {{currentTeam.name}} </p>
-  <p></p>
-  <div *ngFor="let player of currentTeam.squad">
-    <p> {{player.name}} </p>
-  </div>
+  <br><br><br><br>
+  <table class="table">
+    <thead class="dark" >
+      <tr>
+        <th scope="col"> {{currentTeam.name}} </th>
+        <th scope="col"> {{currentTeam.founded}} </th>
+        <th scope="col"> <img src={{currentTeam.crestUrl}} alt="Smiley face" height="90" width="90"> </th>
+        <th scope="col">  </th>
+      </tr>
+    </thead>
+
+    <thead class="dark1" >
+      <tr>
+        <th scope="col"> Sede: </th>
+        <th scope="col"> {{currentTeam.address}} </th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        </tr>
+    </thead>
+
+    <thead class="dark2" >
+      <tr>
+        <th scope="col"> Numero telefonico:</th>
+        <th scope="col"> {{currentTeam.phone}} </th>
+        <th scope="col"> </th>
+        <th scope="col"> </th>
+        </tr>
+    </thead>
+
+    <thead class="dark3" >
+        <tr>
+          <th scope="col"> Email:</th>
+          <th scope="col"> {{currentTeam.email}} </th>
+          <th scope="col"> </th>
+          <th scope="col"> </th>
+           </tr>
+      </thead>
+
+
+    <tbody *ngFor="let player of currentTeam.squad">
+        <tr>
+          <td>  {{player.name}} </td>
+          <td> {{player.nationality}} </td>
+          <td> {{player.position}} </td>
+          <td> {{player.shirtnumber}} </td>
+        </tr>
+      </tbody>
+
+  </table>
 </div>
