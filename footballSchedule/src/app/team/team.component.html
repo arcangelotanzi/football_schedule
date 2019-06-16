@@ -36,12 +36,22 @@
           <th scope="col"> {{currentTeam.email}} </th>
           <th scope="col"> </th>
           <th scope="col"> </th>
-           </tr>
+        </tr>
       </thead>
+
+      <thead class="dark4" >
+          <tr>
+            <th scope="col"> Rosa squadra</th>
+            <th scope="col"> </th>
+            <th scope="col"> </th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
 
 
     <tbody *ngFor="let player of currentTeam.squad">
         <tr>
+          
           <td>  {{player.name}} </td>
           <td> {{player.nationality}} </td>
           <td> {{player.position}} </td>
