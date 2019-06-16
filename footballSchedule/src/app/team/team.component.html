@@ -1,2 +1,8 @@
-<p> <img src={{currentTeam.crestUrl}} alt="Smiley face" height="42" width="42"> </p>
-<p> {{currentTeam.name}} </p>
+<div *ngIf="currentTeam!= undefined">
+  <p> <img src={{currentTeam.crestUrl}} alt="Smiley face" height="42" width="42"> </p>
+  <p> {{currentTeam.name}} </p>
+  <p></p>
+  <div *ngFor="let player of currentTeam.squad">
+    <p> {{player.name}} </p>
+  </div>
+</div>

@@ -10,8 +10,16 @@ export class AppComponent {
 
   message: number;
   title = 'Football Schedule';
+  loadComponent = false;
 
   receiveMessage(msg) {
     this.message = msg;
+    console.log(this.message);
+    this.loadComponent = false;
+  }
+
+
+  toggleChild() {
+    this.loadComponent = !this.loadComponent;
   }
 }
