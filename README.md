@@ -1,88 +1,61 @@
-# Project Title
+# Football Schedule Project!
 
-One Paragraph of project description goes here
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Si vuole realizzare un’applicazione web che consenta ad un utente di visualizzare il tabellone del campionato di serie A 2018-2019. Accedendo alla pagina introduttiva che mostra un tabellone di tutte le giornate del campionato, l'utente può accedere alle pagine di dettaglio di ogni partita, visualizzandone i particolari. Cliccando su di una delle squadre, l'utente può accedere ad una pagina di dettaglio della squadra in cui visualizzare prestazioni (competizioni attive) e componenti del team.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Before you can do something,you need to download and install this softwares:
 
 ```
-Give examples
+Visual Studio Code
+Node JS
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Tutorial step by step
 
 ```
-Give the example
+1) Download the latest release of this project;
 ```
 
-And repeat
-
 ```
-until finished
+2)Open Visual Studio code and open the downloded project folder;
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+3)Open the Terminal in the Visual Studio Code;
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
 ```
-Give an example
+4)write npm install && npm install -g @angular/cli in terminal;
 ```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
+```
+5)write ng serve in terminal;
+```
+
+```
+6)Go on your browser and write in the address bar localhost:4200 to see the project;
+```
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Angular](https://angular.io/) 
+* [Node JS](https://nodejs.org/it/)
+* [Football Data API](https://www.football-data.org)
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Francesco Nuzzo** (https://github.com/djkon960)
+* **Arcangelo Tanzi** (https://github.com/arcangelotanzi)
+* **Savino Lavigna** (https://github.com/Sampino)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
 
