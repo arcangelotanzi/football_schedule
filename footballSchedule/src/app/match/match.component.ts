@@ -15,18 +15,16 @@ export class MatchComponent implements OnInit {
   giornantaCorrente: Giornata;
   @Input() numeroGiornata;
 
-  constructor(private matchService: MatchService) {
-    console.log("ciao");
+  constructor(private matchService: MatchService) { }
 
-  }
+  ngOnInit() { }
 
-  ngOnInit() {
-  }
-
-  getPartiteGiornata(numeroGiornata){
-    this.matchService.getPartiteDellaGiornata(numeroGiornata).pipe()
-      .subscribe(result => {
-        this.giornantaCorrente = result;
-      });
+  getPartiteGiornata(numeroGiornata) {
+    if (numeroGiornata !== "") {
+      this.matchService.getPartiteDellaGiornata(numeroGiornata).pipe()
+        .subscribe(result => {
+          this.giornantaCorrente = result;
+        });
+    }
   }
 }

@@ -8,7 +8,7 @@
         <th scope="col"> {{currentTeam.name}} </th>
         <th scope="col"> {{currentTeam.founded}} </th>
         <th scope="col">  </th>
-        <th scope="col"> <img src={{currentTeam.crestUrl}} alt="Smiley face" height="90" width="90"> </th>
+        <th scope="col"> <img src={{currentTeam.crestUrl}} alt="Logo non trovato" height="90" width="90"> </th>
       </tr>
     </thead>
 
@@ -39,11 +39,21 @@
         </tr>
       </thead>
 
+
       <thead class="dark4" >
+          <tr>
+            <th scope="col"> Coach:</th>
+            <th scope="col">  {{currentTeam.coach}} </th>
+            <th scope="col"> </th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+
+      <thead class="dark5" >
           <tr>
             <th scope="col"> Rosa squadra</th>
             <th scope="col">  Ruolo </th>
-            <th scope="col">  </th>
+            <th scope="col">  Numero</th>
             <th scope="col">  Nazionalità </th>
           </tr>
         </thead>
@@ -51,7 +61,7 @@
 
     <tbody *ngFor="let player of currentTeam.squad">
         <tr>
-          
+
           <td>  {{player.name}} </td>
           <td> {{player.position}} </td>
           <td> {{player.shirtnumber}} </td>

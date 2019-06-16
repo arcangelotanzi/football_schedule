@@ -14,6 +14,7 @@ export class Team {
   public venue: string;
   public crestUrl: string;
   public squad: Player[] = [];
+  public coach: string;
 
   static fromJson(json: any): Team {
     const team: Team = new Team();
@@ -32,7 +33,15 @@ export class Team {
     team.crestUrl = json.crestUrl;
 
     if (json.squad !== undefined) {
-      team.squad = json.squad;
+      for (let player of json.squad) {
+        if (player.role == "COACH") {
+          team.coach = player.name;
+        }
+        else {
+          team.squad.push(Player.fromJson(player));
+        }
+      }
+      //team.squad = json.squad;
     }
 
     return team;

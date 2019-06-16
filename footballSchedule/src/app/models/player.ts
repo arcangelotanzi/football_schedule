@@ -5,6 +5,7 @@ export class Player {
   public nationality: string;
   public position: string;
   public shirtnumber: number;
+  public role: string;
 
   static fromJson(json: any): Player {
     const singlePlayer: Player = new Player();
@@ -14,7 +15,8 @@ export class Player {
     singlePlayer.nationality = json.nationality;
     singlePlayer.dateOfBirth = json.dateOfBirth;
     singlePlayer.position = json.position;
-    singlePlayer.shirtnumber = json.shirtnumber;
+    singlePlayer.shirtnumber = json.shirtNumber;
+    singlePlayer.role = json.role;
 
     return singlePlayer;
   }
