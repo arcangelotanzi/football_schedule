@@ -11,7 +11,7 @@
     </thead>
     <tbody *ngFor="let posizione of ranking.rankingObject">
       <tr>
-        <td> <button (click)="onClick(posizione.team.id)"> {{posizione.team.name}} </button> </td>
+        <td> <button style="background-color: transparent;"(click)="onClick(posizione.team.id)"> {{posizione.team.name}} </button> </td>
         <td align="center">{{posizione.points}}</td>
         <td align="center">{{posizione.won}}</td>
       </tr>
