@@ -9,18 +9,17 @@ Si vuole realizzare un’applicazione web che consenta ad un utente di visualizz
 
 Before you can do something,you need to download and install this softwares:
 
-```
-Visual Studio Code
-Node JS
-```
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Node JS](https://nodejs.org/it/)
+
 
 ### Installing
 
 Tutorial step by step
 
-```
-1) Download the latest release of this project(https://github.com/arcangelotanzi/football_schedule/releases) and unzip it;
-```
+1) [Download the latest release of this project](https://github.com/arcangelotanzi/football_schedule/releases) and unzip it;
+
 
 ```
 2)Open Visual Studio code and open the downloded project folder;
@@ -40,7 +39,7 @@ Tutorial step by step
 ```
 
 ```
-6)Go on your browser and write in the address bar localhost:4200 to see the project;
+6)Go on your browser and write in the address bar (localhost:4200) to see the project;
 ```
 
 ## Built With
