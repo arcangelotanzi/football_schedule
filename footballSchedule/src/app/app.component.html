@@ -6,8 +6,9 @@
       <div class="col-sm">
         <div style="text-align:center">
 
-          <img width="200" alt="Football Schedule Logo" src="/assets/logo_transparent.png">
-          <button class="btn btn-warning" (click)="toggleChild()">RICERCA PER GIORNATA</button>
+          <img width="200" alt="Football Schedule Logo" src="/assets/logo_transparent.png"><br>
+          <button *ngIf="showButton == false" class="button2" (click)="toggleChild()" >Ricerca per giornata</button>
+
         </div>
         <app-ranking (clickedTeam)="receiveMessage($event)"></app-ranking>
 

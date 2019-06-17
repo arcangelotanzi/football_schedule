@@ -5,15 +5,19 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">Nome Squadra </th>
-        <th scope="col" align="center">Punti</th>
-        <th scope="col" align="center">Vittorie</th>
+        <th scope="col">Punti</th>
+        <th scope="col">Vittorie</th>
+        <th scope="col">Pareggi</th>
+        <th scope="col">Sconfitte</th>
       </tr>
     </thead>
     <tbody *ngFor="let posizione of ranking.rankingObject">
       <tr>
-        <td (click)="onClick(posizione.team.id)"> {{posizione.team.name}}</td>
+        <td (click)="onClick(posizione.team.id)"  class="box"> {{posizione.team.name}}</td>
         <td align="center">{{posizione.points}}</td>
         <td align="center">{{posizione.won}}</td>
+        <td align="center">{{posizione.draw}}</td>
+        <td align="center">{{posizione.lost}}</td>
       </tr>
     </tbody>
 

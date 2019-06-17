@@ -2,10 +2,18 @@
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    border-radius: 15px 15px 15px 15px;
+
+    
 
   }
 
   .table:nth-child(even) {background: rgba(241, 240, 240, 0.63)}
-  div {
-    margin-top:2%;
-}
+
+  
+  .th_small {width: 20px;}
+  
+div {
+    margin-top:2%;}
+
+.box { cursor: pointer;}

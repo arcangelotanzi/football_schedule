@@ -6,7 +6,7 @@ div {
 
 .container {
   position: absolute;
-  margin-top: 8%;
+  margin-top: 6%;
   top: 0;
   left: 0;
   right: 0;
@@ -143,11 +143,12 @@ div {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    border-radius:15px;
    
 
   }
 
-  .table:nth-child(odd) {background: rgb(241, 240, 240)}
+  .table:nth-child(odd) {background: rgba(241, 240, 240, 0.63)}
   
   .borderexample {
     border-style:solid;
@@ -157,3 +158,4 @@ div {
 .prova{
     background-color: rgba(255, 255, 255, 0.372);
 }
+

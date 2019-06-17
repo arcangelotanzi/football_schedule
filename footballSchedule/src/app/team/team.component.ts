@@ -12,6 +12,8 @@ export class TeamComponent implements OnInit {
   @Input() idTeam: number;
   currentTeam: Team;
   changeLog:any[]=[];
+  loadComponent = false;
+  message: number;
 
   constructor(private teamService: TeamService) { }
 
@@ -29,4 +31,15 @@ export class TeamComponent implements OnInit {
       }
       );
   }
+  receiveMessage(msg) {
+    this.message = msg;
+    console.log(this.message);
+    this.loadComponent = false;
+  }
+
+
+  toggleChild() {
+    this.loadComponent = !this.loadComponent;
+  }
+
 }

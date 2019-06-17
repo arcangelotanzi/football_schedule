@@ -11,15 +11,18 @@ export class AppComponent {
   message: number;
   title = 'Football Schedule';
   loadComponent = false;
+  showButton= true;
 
   receiveMessage(msg) {
     this.message = msg;
     console.log(this.message);
     this.loadComponent = false;
+    this.showButton = false;
   }
 
 
   toggleChild() {
     this.loadComponent = !this.loadComponent;
+    this.showButton = !this.showButton;
   }
 }
