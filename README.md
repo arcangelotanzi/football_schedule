@@ -19,7 +19,7 @@ Node JS
 Tutorial step by step
 
 ```
-1) Download the latest release of this project;
+1) Download the latest release of this project(https://github.com/arcangelotanzi/football_schedule/releases) and unzip it;
 ```
 
 ```
