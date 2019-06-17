@@ -12,7 +12,7 @@ export class RankingService {
 
   constructor(private http: HttpClient) { }
 
-  getRanking(){
+  getRanking() {
     const url = this.BASE_URL;
     return this.http.get(url, {headers: {'X-Auth-Token': '3f7baae8e7e04a779af756d912da901a'}}).pipe(map((response: any) => {
       console.log('RANKING_SERVICE_LOG: ', response);

@@ -9,7 +9,6 @@ export class Giornata {
     for (let item of json.matches) {
       giornata.myMatches.push(Match.fromJson(item));
     }
-
     return giornata;
   }
 }

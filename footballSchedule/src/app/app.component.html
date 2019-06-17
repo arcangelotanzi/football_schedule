@@ -1,34 +1,24 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-
 <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div style="text-align:center">
+  <div class="row">
+    <div class="col-sm">
+      <div style="text-align:center">
 
-          <img width="200" alt="Football Schedule Logo" src="/assets/logo_transparent.png"><br>
-          <button *ngIf="showButton == false" class="button2" (click)="toggleChild()" >Ricerca per giornata</button>
-
-        </div>
-        <app-ranking (clickedTeam)="receiveMessage($event)"></app-ranking>
+        <img width="200" alt="Football Schedule Logo" src="/assets/logo_transparent.png"><br>
+        <button *ngIf="showButton == false" class="button2" (click)="toggleChild()">Ricerca per giornata</button>
 
       </div>
-      <div class="col-sm">
+      <app-ranking (clickedTeam)="receiveMessage($event)"></app-ranking>
 
-        <div *ngIf="message==undefined ||  loadComponent; else displayTeamDetails"> <app-match></app-match> </div>
-            <ng-template #displayTeamDetails><app-team #appTeam [idTeam]="message"></app-team></ng-template>
+    </div>
+    <div class="col-sm">
 
-
-
-      </div>
-      <!--
+      <div *ngIf="message==undefined ||  loadComponent; else displayTeamDetails">
         <app-match></app-match>
+      </div>
+      <ng-template #displayTeamDetails>
+        <app-team #appTeam [idTeam]="message"></app-team>
+      </ng-template>
 
-        <div class="col-sm">
-        LISTA SQUADRE {{message}}
-        <app-team [idTeam]="message"></app-team>
-
-
-      </div>-->
     </div>
   </div>
+</div>

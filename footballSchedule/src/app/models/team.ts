@@ -41,7 +41,6 @@ export class Team {
           team.squad.push(Player.fromJson(player));
         }
       }
-      //team.squad = json.squad;
     }
 
     return team;

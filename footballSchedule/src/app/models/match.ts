@@ -1,21 +1,21 @@
 import { Team } from './team';
 
 export class Match {
-  id: number;
-  utcDate: string;
-  status: string;
-  minute: string;
-  attendance: number;
-  venue: string;
-  matchDay: number;
-  stage: string;
-  homeTeam: Team;
-  awayTeam: Team;
-  scoreHomeTeam: string;
-  scoreAwayTeam: string;
-  homePartial: string;
-  awayPartial: string;
-  currentMatch: number;
+  public id: number;
+  public utcDate: string;
+  public status: string;
+  public minute: string;
+  public attendance: number;
+  public venue: string;
+  public matchDay: number;
+  public stage: string;
+  public homeTeam: Team;
+  public awayTeam: Team;
+  public scoreHomeTeam: string;
+  public scoreAwayTeam: string;
+  public homePartial: string;
+  public awayPartial: string;
+  public currentMatch: number;
 
   static fromJson(json: any): Match {
     const currentMatch: Match = new Match();

@@ -4,13 +4,13 @@ export class RankingObject {
   public position: number;
   public team: Team= new Team();
   public playedGames: number;
-  won: number;
-  draw: number;
-  lost: number;
-  points: number;
-  goalsFor: number;
-  goalsAgainst: number;
-  goalDifference: number;
+  public won: number;
+  public draw: number;
+  public lost: number;
+  public points: number;
+  public goalsFor: number;
+  public goalsAgainst: number;
+  public goalDifference: number;
 
   static fromJson(json: any): RankingObject {
     const rankingObject: RankingObject = new RankingObject();

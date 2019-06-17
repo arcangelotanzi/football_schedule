@@ -16,8 +16,7 @@ export class TeamService {
   getTeamDetails( idTeam ) {
     const url = this.BASE_URL + idTeam;
     return this.http.get(url, { headers: { 'X-Auth-Token': '3f7baae8e7e04a779af756d912da901a' } }).pipe(map((response: any) => {
-      console.log('TEAM_SERVICE_LOG: ', response);
-      return response; // this.teams = response;
+      return response;
     }));
   }
 }

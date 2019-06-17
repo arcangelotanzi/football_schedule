@@ -11,7 +11,7 @@ export class TeamComponent implements OnInit {
 
   @Input() idTeam: number;
   currentTeam: Team;
-  changeLog:any[]=[];
+  changeLog: any[] = [];
   loadComponent = false;
   message: number;
 

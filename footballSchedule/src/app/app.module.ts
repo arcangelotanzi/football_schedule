@@ -7,8 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { TeamComponent } from './team/team.component';
 import { RankingComponent } from './ranking/ranking.component';
 
-import { AppRoutingModule } from './app-routing.module';
-
 
 @NgModule({
   declarations: [
